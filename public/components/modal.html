@@ -1,0 +1,44 @@
+<div id="btn-usuario">
+    <iconify-icon icon="material-symbols:person-outline"></iconify-icon>Perfil
+</div>
+<div id="modal-derecha">
+    <div id="encabezado-login">
+        <!-- <ion-icon
+            id="cerrar-login"
+            onclick="noMostrarSesion()"
+            name="close-circle-outline"
+        ></ion-icon> -->
+        <!-- cerrar -->
+        <!-- <i class="fa-solid fa-xmark" id="cerrar-login" onclick="noMostrarSesion()"></i> -->
+        <iconify-icon
+            id="cerrar-login"
+            icon="material-symbols:close"
+            onclick="noMostrarSesion()"
+        ></iconify-icon>
+
+        <p>Modo Oscuro:</p>
+        <div id="dark-mode">
+            <div class="circle">
+                <iconify-icon
+                    id="light-mode-icon"
+                    icon="material-symbols:light-mode"
+                    class="dark-mode-icon sun"
+                ></iconify-icon>
+                <iconify-icon
+                    id="dark-mode-icon"
+                    icon="material-symbols:dark-mode"
+                    class="dark-mode-icon moon"
+                ></iconify-icon>
+
+                <!-- <ion-icon class="sun" name="sunny"></ion-icon> -->
+                <!-- <ion-icon class="moon" name="moon"></ion-icon> -->
+            </div>
+        </div>
+        <button id="cerrar-sesion">Cerrar</button>
+    </div>
+    <div id="modal-content">
+        <div id="contenedor-iniciar-sesion" class="container-modal-usuario"></div>
+        <div id="contenedor-registrarse" class="container-modal-usuario"></div>
+        <div id="contenedor-sesion" class="container-modal-usuario"></div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="contenedor-encabezado-interior">
+    <h2><p>Bienvenido,</p></h2>
+    <a id="btn-cerrar-sesion" class="logout-button">Cerrar sesión</a>
+</div>
+
+<ul class="menu-list m-4">
+    <li id="mis_chats">
+        <a href="#mis-chats" class="menu-item"
+            ><ion-icon name="chatbubbles"></ion-icon> Mis Chats</a
+        >
+    </li>
+    <li>
+        <a asp-controller="Favoritos" asp-action="Index" class="menu-item"
+            ><ion-icon name="heart"></ion-icon> Mis Me Gusta</a
+        >
+    </li>
+    <li id="administrador">
+        <a href="/public/pages/crud.html" class="menu-item"
+            ><ion-icon name="admin"></ion-icon>Admin</a
+        >
+    </li>
+    <li id="carrito">
+        <a href="/public/pages/carrito.html" class="menu-item"
+            ><ion-icon name="shop"></ion-icon>Carrito</a
+        >
+    </li>
+
+    <!-- <li>
+        <div id="tamanio-letra-contenedor">
+            <div class="slide-container">
+                <p>Tamaño letra</p>
+                <input type="range" id="tamanio-letra" min="1" max="30" value="12" />
+                <span id="tamanio-valor">12px</span>
+            </div>
+
+            <button id="aplicar-tamanio">Aplicar</button>
+        </div>
+        <div id="texto-muestra">lorem ipsum dolor sit amet</div>
+    </li> -->
+</ul>
+
+<script>
+    const slider = document.getElementById('tamanio-letra')
+    const valor = document.getElementById('tamanio-valor')
+    const textoMuestra = document.getElementById('texto-muestra')
+
+    // Actualizar el valor mostrado al mover el slider
+    slider.addEventListener('input', function () {
+        valor.textContent = `${slider.value}px`
+        textoMuestra.style.fontSize = `${slider.value}px`
+    })
+</script>

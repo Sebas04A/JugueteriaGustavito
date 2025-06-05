@@ -1,0 +1,62 @@
+<template>
+    <link rel="stylesheet" href="/public/css/pages/producto.css" />
+    <div class="propertyItem">
+        <div class="containerPropertyImg">
+            <a class="h-100 p-2 cursor-pointer opacity-1 hover:opacity-70 propertyLink" href="">
+                <img class="propertyImage image" />
+            </a>
+            <span class="propertyTag"> </span>
+            <div class="importanteCasa">
+                <div class="flex items-center gap-2 text-[var(--color-texto-secundario)]">
+                    <p class="font-bold nombre mb-0"></p>
+                </div>
+                <p class="propertyPrice mb-0"></p>
+            </div>
+        </div>
+        <ul class="listDetails flex-2 mb-0">
+            <!-- <li class="detailElement">
+                <iconify-icon
+                    icon="akar-icons:bed"
+                    class="{styles.detailIcon}"
+                    style="color: #fff; font-size: 20px"
+                ></iconify-icon>
+
+                <p class="ml-4 desc1 mb-0"></p>
+            </li> -->
+
+            <li class="detailElement">
+                <iconify-icon
+                    icon="akar-icons:shower"
+                    class="{styles.detailIcon}"
+                    style="color: #fff; font-size: 20px"
+                ></iconify-icon>
+                <p class="flex-1 desc2 mb-0"></p>
+            </li>
+        </ul>
+        <button class="buy-button" onclick="comprarProducto(event)" data-id="@producto.ProductoId">
+            Agregar al Carrito
+        </button>
+        <div
+            class="cantidad-container d-flex gap-3 justify-content-center align-items-center bg-primario rounded-bottom"
+        >
+            <p class="etiqueta mb-0 fw-bold">Cantidad:</p>
+            <div class="contador d-flex gap-2 align-items-center">
+                <button
+                    class="quitar-cantidad btn bg-fondo-blanco font-bold m-1 rounded"
+                    onclick="quitarStock(event)"
+                    data-id="@producto.ProductoId"
+                >
+                    -
+                </button>
+                <p class="cantidad mb-0 text-center font-bold text-lg rounded">0</p>
+                <button
+                    class="agregar-cantidad btn bg-fondo-blanco font-bold m-1 rounded"
+                    onclick="agregarStock(event)"
+                    data-id="@producto.ProductoId"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+</template>

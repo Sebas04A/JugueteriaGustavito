@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gustavito David Jugeteria</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/public/css/site.css" />
+        <link rel="stylesheet" href="/public/css/login.css" />
+        <link rel="stylesheet" href="/public/css/form.css" />
+        <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    </head>
+    <body>
+        <div id="nav-placeholder"></div>
+        <main>
+            <!-- Página de Confirmación de Compra para Tienda de Juguetes -->
+            <div class="container my-5">
+                <div class="card shadow-lg rounded-3 border-0">
+                    <!-- Encabezado -->
+                    <div class="card-header bg-primario text-center py-4 rounded-top">
+                        <h2 class="mb-0 bg-primario">🎉 ¡Compra Confirmada! 🎉</h2>
+                        <p class="mb-0 bg-primario">Gracias por confiar en Tienda de Juguetes</p>
+                    </div>
+
+                    <div class="card-body bg-light">
+                        <div class="row gx-4 gy-4">
+                            <!-- Sección: Información del Cliente -->
+                            <div class="">
+                                <div class="card border-0">
+                                    <div class="card-header text-center py-2 rounded-top">
+                                        <h5 class="mb-0">👤 Información del Cliente</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-2">
+                                            <strong>Cédula:</strong>
+                                            <span id="clienteCedula">sample string 1</span>
+                                        </p>
+                                        <p class="mb-2">
+                                            <strong>Nombre:</strong>
+                                            <span id="clienteNombre">sample string 2</span>
+                                        </p>
+                                        <p class="mb-2">
+                                            <strong>Apellido:</strong>
+                                            <span id="clienteApellido">sample string 3</span>
+                                        </p>
+                                        <p class="mb-0">
+                                            <strong>Teléfono:</strong>
+                                            <span id="clienteTelefono">sample string 4</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección: Dirección y Método de Pago -->
+                            <!-- <div class="col-md-6"> -->
+                            <!-- <div class="card border-0 mb-4">
+                                    <div class="card-header text-center py-2 rounded-top">
+                                        <h5 class="mb-0">🚚 Dirección de Envío</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" id="direccionEnvio">sample string 1</p>
+                                    </div>
+                                </div> -->
+                            <!-- <div class="card border-0">
+                                    <div class="card-header text-center py-2 rounded-top">
+                                        <h5 class="mb-0">💳 Método de Pago</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-0" id="metodoPagoConfirm">sample string 2</p>
+                                    </div>
+                                </div> -->
+                            <!-- </div> -->
+
+                            <!-- Sección: Productos Comprados -->
+                            <div class="col-12">
+                                <div class="card border-0">
+                                    <div
+                                        class="card-header bg-primario text-center py-2 rounded-top"
+                                    >
+                                        <h5 class="mb-0 bg-primario">🛒 Productos Comprados</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul id="productosComprados" class="list-group">
+                                            <!-- Producto 1 -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center"
+                                            >
+                                                <div>
+                                                    <strong>Producto ID:</strong> 1<br />
+                                                    <small>Cantidad: 2</small>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill"
+                                                    >✔️</span
+                                                >
+                                            </li>
+                                            <!-- Producto 2 -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center"
+                                            >
+                                                <div>
+                                                    <strong>Producto ID:</strong> 1<br />
+                                                    <small>Cantidad: 2</small>
+                                                </div>
+                                                <span class="badge bg-success rounded-pill"
+                                                    >✔️</span
+                                                >
+                                            </li>
+                                            <!-- Total (opcional) -->
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center bg-light fw-bold"
+                                            >
+                                                <div>Total de Productos</div>
+                                                <span class="text-success">4 unidades</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mensaje Final -->
+                            <div class="col-12 text-center mt-4">
+                                <p class="lead">¡Tu factura ha sido generada exitosamente! 📄✅</p>
+                                <!-- <a href="index.html" class="btn btn-primary btn-lg shadow-sm">
+                                    🏠 Volver al Inicio
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="modal-placeholder"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="js/components/modal.js"></script> -->
+        <script src="/public/js/main.js" type="module"></script>
+        <script type="module" src="/public/js/pages/compraRealizada.js"></script>
+    </body>
+</html>

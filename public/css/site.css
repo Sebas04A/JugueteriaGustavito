@@ -1,0 +1,520 @@
+/* ---------------------------------------      COLORES */
+
+:root {
+    --color-fondo: #eeeeee;
+    --color-primario: #2c3e50;
+    /* --color-primario: #f4b036; */
+    --color-primario-claro: #4f6881;
+    --color-secundario-claro: #ffa095;
+    --color-secundario: #ff6347;
+    --color-texto: #333;
+    --color-texto-claro: #555;
+    --color-texto-primario: #ffffff;
+    --color-texto-secundario: #f9f9f9;
+    --color-texto-blanco: #ffffff;
+    --color-fondo-blanco: #ffffff;
+    --color-borde: #ddd;
+    --color-sombra: rgba(0, 0, 0, 0.5);
+    --color-texto-fondo: #2c3e50;
+    --color-modo-rgb: 0, 0, 0;
+    /* --color-fondo: #fff; */
+    /* --color-fondo-blanco: #e6e6e6; */
+}
+
+:root.oscuro {
+    --color-terciario: #f4442e;
+    --color-fondo: #2e2e2e;
+    --color-primario: #000;
+    --color-secundario: #ffa425;
+    --color-primario-claro: #333;
+    --color-secundario-claro: #c5862e;
+    --color-texto: #ededed;
+    --color-texto-claro: #bebebe;
+    --color-texto-primario: #fcf7ff;
+    --color-texto-secundario: #f9f9f9;
+    --color-texto-blanco: #000000;
+    --color-fondo-blanco: #000000;
+    --color-modo-rgb: 0, 0, 0;
+    --color-sombra: rgba(255, 191, 31, 0.7);
+    /* --color-sombra: rgba(255, 255, 255, 0.7); */
+
+    --color-texto-fondo: #fff;
+    /* --color-fondo: #000; */
+    /* --color-fondo-blanco: #2e2e2e; */
+}
+:root,
+[data-bs-theme='light'] {
+    /* Colores base */
+    --bs-body-bg: var(--color-fondo-blanco);
+    --bs-body-color: var(--color-texto);
+    --bs-body-color-rgb: 51, 51, 51;
+    /* Paleta de colores principales */
+    --bs-primary: var(--color-primario);
+    --bs-secondary: var(--color-secundario);
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: var(--color-secundario);
+    --bs-light: var(--color-fondo-blanco);
+    --bs-dark: var(--color-texto-fondo);
+    /* Colores de �nfasis */
+    --bs-primary-text-emphasis: var(--color-primario-claro);
+    --bs-secondary-text-emphasis: var(--color-secundario-claro);
+    --bs-success-text-emphasis: #0a3622;
+    --bs-info-text-emphasis: #055160;
+    --bs-warning-text-emphasis: #664d03;
+    --bs-danger-text-emphasis: var(--color-secundario);
+    --bs-light-text-emphasis: var(--color-texto-claro);
+    --bs-dark-text-emphasis: var(--color-texto);
+    /* Colores de fondo sutiles */
+    --bs-primary-bg-subtle: var(--color-primario-claro);
+    --bs-secondary-bg-subtle: var(--color-secundario-claro);
+    --bs-success-bg-subtle: #d1e7dd;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: var(--color-secundario-claro);
+    --bs-light-bg-subtle: var(--color-fondo-blanco);
+    --bs-dark-bg-subtle: var(--color-texto-fondo);
+    /* Colores de bordes */
+    --bs-primary-border-subtle: var(--color-primario-claro);
+    --bs-secondary-border-subtle: var(--color-secundario-claro);
+    --bs-success-border-subtle: #a3cfbb;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: var(--color-secundario);
+    --bs-light-border-subtle: var(--color-borde);
+    --bs-dark-border-subtle: var(--color-texto);
+    /* Sombra y bordes */
+    --bs-border-color: var(--color-borde);
+    --bs-border-radius: 0.375rem;
+    --bs-box-shadow: 0 0.5rem 1rem var(--color-sombra);
+    /* Enlaces */
+    --bs-link-color: var(--color-primario);
+    --bs-link-hover-color: var(--color-primario-claro);
+    --bs-link-hover-color-rgb: 79, 104, 129;
+    /* Texto */
+    --bs-heading-color: var(--color-texto);
+    --bs-font-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+        'Noto Sans', 'Liberation Sans', Arial, sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    /* Formularios y botones */
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: var(--color-secundario);
+    --bs-form-invalid-border-color: var(--color-secundario);
+    --bs-btn-border-radius: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-padding-y: 0.75rem;
+    /* Otros ajustes */
+    --bs-focus-ring-color: rgba(var(--color-primario), 0.25);
+    --bs-highlight-bg: var(--color-secundario-claro);
+}
+.color-primario {
+    color: var(--color-primario);
+}
+.color-secundario {
+    color: var(--color-secundario);
+}
+.color-secundario-claro {
+    color: var(--color-secundario-claro);
+}
+.color-primario-claro {
+    color: var(--color-primario-claro);
+}
+.color-texto {
+    color: var(--color-texto);
+}
+.color-texto-claro {
+    color: var(--color-texto-claro);
+}
+.color-texto-primario {
+    color: var(--color-texto-primario);
+}
+.color-texto-secundario {
+    color: var(--color-texto-secundario);
+}
+.color-texto-fondo {
+    color: var(--color-texto-fondo);
+}
+.bg-fondo {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+.bg-fondo-blanco {
+    background-color: var(--color-fondo-blanco);
+}
+.bg-primario {
+    background-color: var(--color-primario);
+    color: var(--color-texto-primario);
+}
+.bg-secundario {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-secundario);
+}
+.bg-secundario-claro {
+    background-color: var(--color-secundario-claro);
+    color: var(--color-texto-secundario);
+}
+.bg-primario-claro {
+    background-color: var(--color-primario-claro);
+    color: var(--color-texto-primario);
+}
+.bg-primario:hover {
+    background-color: var(--color-primario-claro);
+    color: var(--color-texto-primario);
+}
+.bg-secundario:hover {
+    background-color: var(--color-secundario-claro);
+    color: var(--color-texto-primario);
+}
+
+/* modo oscuro */
+/* :root {
+    --color-fondo: #46464e;
+    --color-primario: #95b0cb;
+    --color-primario-claro: #ff8a75;
+    --color-secundario-claro: #ffa852;
+    --color-secundario: #4f6881;
+    --color-texto: #f9f9f9;
+    --color-texto-claro: #f0f0f0;
+    --color-texto-primario: #414141;
+    --color-fondo-blanco: #373737;
+    --color-secundario-claro: #ffa852;
+    --color-secundario: #ff9913;
+} */
+/* --------------------------------------------------- GENERAL */
+/* Definir el tama�o base del html */
+html {
+    font-size: 18px; /* Base que facilita el uso de rem */
+}
+
+body {
+    overflow-x: scroll;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 1em; /* Corresponde a 16px */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    padding-top: 5.5rem;
+    width: 100vw;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    /* background-image: url('/public/assets/images/patterGus.png');
+    background-repeat: repeat;
+    background-size: 400px;
+    background-attachment: fixed; */
+}
+/* main {
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+} */
+body {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Reset b�sico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------- ENCABEZADO */
+.header {
+    color: var(--color-texto-primario);
+    background-color: var(--color-primario);
+}
+
+#logo-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    padding: 1rem;
+    position: fixed;
+    background-color: var(--color-primario);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.8;
+    top: 0;
+    z-index: 1000; /* Para asegurar que est� por encima del contenido */
+    height: 5rem;
+    /* filter: brightness(1.2);  */
+    box-shadow: 0px 0.5rem 1rem var(--color-sombra);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#titulo {
+    flex-grow: 3;
+    text-align: end;
+    white-space: nowrap;
+    margin: 0px;
+    padding-left: 3rem;
+    color: var(--color-texto-primario);
+    font-size: 2rem; /* Tama�o del t�tulo para m�viles */
+    font-weight: 700; /* Grosor del t�tulo */
+}
+
+#hamburguesa {
+    display: none;
+    flex-grow: 3;
+    padding: 0 1rem;
+    left: 0px;
+    border-radius: 5px;
+    font-size: 3rem;
+    color: var(--color-texto-primario);
+}
+
+nav ul {
+    flex-grow: 1;
+    flex-shrink: 4;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Espaciado basado en em para mantener consistencia */
+    display: flex;
+    justify-content: end;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#nav-list li {
+    margin: 0 1.5rem;
+}
+
+#nav-list .actual {
+    color: var(--color-secundario-claro);
+}
+
+#nav-list a:hover {
+    color: var(--color-secundario);
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: var(--color-texto-primario);
+}
+
+#nav-list:hover:after {
+    transform: scalex(1);
+}
+
+#nav-list:after {
+    transition: 0.25s ease;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 10px;
+    color: var(--color-secundario-claro);
+    background-color: currentcolor;
+    transform: scalex(0);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+/* ----------------------------------------------MOBILE */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--color-fondo-blanco);
+    /* sombra a la izquierda */
+    box-shadow: 0.5rem 0 1rem var(--color-sombra);
+    /* border-right: 0.5rem solid var(--color-sombra); */
+    color: var(--color-texto-fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    z-index: 1000;
+}
+
+#mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobile-menu ul li {
+    margin: 2rem 0;
+}
+
+#mobile-menu ul li a {
+    text-decoration: none;
+    /* sombra texto */
+    text-shadow: 2px 2px 5px var(--color-sombra);
+    font-size: 2rem;
+    color: var(--color-texto-fondo);
+    transition: color 0.3s ease-in-out;
+}
+
+#mobile-menu ul li a:hover {
+    color: var(--color-secundario);
+}
+/* Estado visible del men� m�vil */
+#mobile-menu.visible {
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ----------------------------------------------------------- CARRITO */
+
+#btn-usuario {
+    position: fixed;
+    bottom: 10px; /* Ajusta seg�n el margen que quieras con el borde inferior */
+    right: 10px; /* Ajusta seg�n el margen que quieras con el borde derecho */
+    z-index: 10000; /* Asegura que la imagen est� siempre por encima de otros elementos */
+    background-color: var(--color-primario-claro);
+    color: var(--color-texto-primario);
+    padding: 1rem;
+    border-radius: 40px;
+}
+
+#btn-usuario:hover {
+    background-color: var(--color-secundario);
+}
+
+#btn-usuario ion-icon {
+    margin-right: 0.5rem;
+}
+
+/* ------------------------------------------------------- FOOTER */
+/* Estilos para el pie de p�gina */
+.footer {
+    max-width: 100vw;
+    position: relative !important;
+    text-align: center;
+    padding: 0.9375rem; /* 15px convertido a rem */
+    background-color: var(--color-primario);
+    color: var(--color-texto-primario);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer p {
+    margin: 0;
+    /*Que se vaya las letras para abjoo*/
+}
+/* --------------------------------------------------------------- MEDIAS */
+/* Media queries para asegurar un buen dise�o responsive */
+@media (max-width: 1324px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 840px) {
+    html {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    #titulo {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 840px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 12px;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    .title-wrapper {
+        flex: 10;
+    }
+
+    #titulo {
+        flex-grow: 8;
+        text-align: end;
+        order: 2;
+    }
+
+    #hamburguesa {
+        display: inline-block;
+        order: 1;
+    }
+
+    .about-us {
+        padding: 2rem !important;
+    }
+}
+
+@media (max-width: 340px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+.volver {
+    position: absolute;
+}
+.btn-formulario {
+    background-color: var(--color-secundario-claro);
+}
+.btn-formulario :hover {
+    background-color: var(--color-secundario);
+}
+h3 {
+    color: var(--color-texto);
+}
+.buy-button {
+    background-color: var(--color-secundario-claro);
+    color: var(--color-texto-primario);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}

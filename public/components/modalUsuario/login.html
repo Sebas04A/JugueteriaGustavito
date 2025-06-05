@@ -1,0 +1,28 @@
+<div class="contenedor-encabezado-interior">
+    <h2>Iniciar Sesión</h2>
+</div>
+<form id="form-iniciar-sesion">
+    <label for="id_usuario">Cedula</label>
+    <input
+        type="text"
+        id="id_usuario"
+        name="id_usuario"
+        placeholder="Ingresa tu usuario"
+        required
+    />
+
+    <label for="contrasena">Contraseña</label>
+    <div id="contra-contenedor">
+        <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Ingresa tu contraseña"
+            required
+        />
+        <ion-icon id="ver-contra" onclick="verContra()" name="eye-off"></ion-icon>
+    </div>
+
+    <button id="btn-iniciar-sesion" type="submit">Entrar</button>
+</form>
+<p id="registrarse-login">Registrarse</p>

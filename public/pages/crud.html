@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gustavito David Jugeteria</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/public/css/site.css" />
+        <link rel="stylesheet" href="/public/css/login.css" />
+        <link rel="stylesheet" href="/public/css/form.css" />
+        <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    </head>
+    <body>
+        <!-- <div id="nav-placeholder"></div> -->
+        <div id="nav-crud-placeholder"></div>
+        <main class="m-4">
+            <div id="crud-placeholder" class="d-flex justify-content-between m-4 hidden">
+                <h1 id="titulo-crud" class="text-center display-4 fw-bold color-primario">
+                    Productos
+                </h1>
+                <button
+                    id="btn-header"
+                    class="btn d-flex bg-primario align-items-center justify-content-center"
+                    id="btn-agregar"
+                    type="button"
+                >
+                    Agregar Producto
+                </button>
+            </div>
+
+            <div
+                id="crud-home"
+                class="container d-flex justify-content-center align-items-center vh-100"
+                style="background: var(--color-primario-claro)"
+            >
+                <div
+                    class="card shadow-lg p-4 text-center"
+                    style="width: 450px; border-radius: 15px; background: white"
+                >
+                    <h2 class="text-center mb-4" style="color: #333; font-weight: bold">
+                        🔧 Panel de Administración
+                    </h2>
+                    <p class="text-muted">Administra el crud facilmente</p>
+                    <div class="d-grid gap-4 mt-3" id="a-container"></div>
+                </div>
+            </div>
+
+            <form id="crud-form" class="row g-3 bg-fondo-blanco rounded p-3 d-none"></form>
+            <!-- <div class="table-responsive m-4 rounded"> -->
+            <div
+                id="crud-tabla"
+                class="d-grid bg-primario m-4 rounded p-1 table-responsive d-none"
+            ></div>
+            <!-- </div> -->
+        </main>
+        <div id="modal-placeholder"></div>
+        <!-- <script type="module" src="/public/js/pages/crudProductos.js"  ></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="js/components/modal.js"></script> -->
+        <!-- <script src="/public/js/main.js" type="module"></script> -->
+        <script type="module" src="/public/js/pages/crud.js"></script>
+    </body>
+</html>

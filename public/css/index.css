@@ -1,0 +1,205 @@
+﻿.titulo-visible {
+    opacity: 1 !important;
+}
+
+.nav-list-visible {
+    transform: translateX(25%); /* Ajusta el valor para mover los elementos a la derecha */
+}
+
+.nav-list-visible:after {
+    opacity: 0;
+}
+
+#titulo {
+    opacity: 0;
+    flex-grow: 4;
+    font-size: 2rem;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+/* ------------------------ NAV */
+nav {
+    opacity: 0.9;
+}
+
+nav ul {
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+/* ----------------------------- INICIO BUSQUEDA */
+#hero {
+    background-image: url('../assets/images/patterGus.png');
+    background-attachment: fixed;
+    /* filter: blur(50%); */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 60vh;
+}
+
+.hero-content {
+    /* dar un donde con transparecnia de --color-modo-rgb */
+    background: rgba(var(--color-modo-rgb), 0.5);
+    border-radius: 20px;
+    width: 100%;
+    padding: 2rem;
+}
+
+#titulo-interno {
+    color: var(--color-texto-primario);
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 3rem;
+    margin-top: 1rem;
+}
+
+#titulo-interno span {
+    font-weight: 600;
+    font-size: 3rem;
+}
+/* ----------------------------- BUSQUEDA */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-submit ion-icon {
+    font-size: 1.5rem;
+}
+
+.search-options {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-texto-primario);
+}
+
+.search-radio {
+    display: none;
+}
+
+.search-radio:checked + .search-btn {
+    background-color: var(--color-primario-claro);
+}
+
+.search-btn {
+    background-color: var(--color-secundario);
+    border: none;
+    padding: 0.7rem 3rem;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.search-btn:hover {
+    background-color: var(--color-secundario-claro);
+}
+
+.search-location {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    padding: 0.8rem;
+    max-width: 70rem;
+    justify-content: center;
+    background-color: var(--color-primario-claro); /* hover pero con opacidad */
+    border-radius: 10px;
+}
+
+.location-select {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.search-input {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    flex: 15;
+}
+
+.search-submit {
+    flex: 0.5;
+    max-width: 7rem;
+    background-color: var(--color-secundario);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--color-texto-secundario);
+}
+
+.search-submit img {
+    height: 20px;
+}
+
+.more-options {
+    color: var(--color-texto-primario);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.more-options:hover {
+    color: var(--color-secundario);
+}
+/* ================================== CASAS */
+.featured-properties {
+    /* padding: 1rem; */
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+/* .featured-properties h2 {
+    font-size: 2.5em;
+    color: var(--color-texto-fondo);
+    margin: 2rem;
+    margin-bottom: 3rem;
+} */
+/* =================================== MEDIA */
+@media (max-width: 768px) {
+    .location-select {
+        display: none;
+    }
+
+    #titulo-interno span {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    #titulo-interno {
+        color: transparent;
+    }
+
+    #titulo-interno span {
+        color: var(--color-texto-primario);
+    }
+
+    #titulo {
+        position: relative;
+        display: inline-block;
+        opacity: 1;
+    }
+
+    #hero {
+        height: 60vh;
+        padding: 0;
+    }
+
+    .hero-content {
+        border-radius: 0;
+    }
+}

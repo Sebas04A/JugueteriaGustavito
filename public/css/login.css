@@ -1,0 +1,80 @@
+﻿
+
+
+.logout-button {
+    background: var(--color-primario);
+    color: var(--color-texto-primario);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-left:auto;
+    padding:.3rem 1rem;
+}
+
+    .logout-button:hover {
+        background: var(--color-secundario);
+    }
+
+
+#container {
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+#loginButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Contenedor de inicio de sesión */
+#loginForm {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    transition: right 0.4s ease;
+}
+
+    #loginForm.active {
+        right: 0;
+    }
+
+    /* Estilos del formulario */
+    #loginForm h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    #loginForm label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    #loginForm input[type='text'],
+    #loginForm input[type='password'] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #loginForm button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        #loginForm button:hover {
+            background-color: #0056b3;
+        }
